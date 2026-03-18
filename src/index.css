@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-green: #39FF14;
+  --font-forma: "Outfit", sans-serif;
+  --font-yu-gothic: "Zen Maru Gothic", "Yu Gothic", sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 0%; /* Black background base */
+    --foreground: 0 0% 100%; /* White text base */
+    --primary: 111 100% 61%; /* #39FF14 Neon Green */
+    --primary-foreground: 0 0% 0%;
+  }
+
+  body {
+    @apply bg-black text-white font-yu-gothic min-h-screen overflow-hidden;
+    /* Gradient background */
+    background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-forma font-bold;
+  }
+}
+
+/* Custom scrollbar hiding */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
